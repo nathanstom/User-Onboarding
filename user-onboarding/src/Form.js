@@ -90,31 +90,31 @@ const Form = () => {
 
     return (
         <>
-            <form onSubmit={submit}>
+            <form id='newUserForm' onSubmit={submit}>
 
                 <label>
                     Username
                     <input onChange={inputChange} id='username' type='text' name='username' value={formData.username} placeholder='Enter a Username'></input>
                 </label>
-                {errors.username.length > 0 && <p>{errors.username}</p>}
+                {errors.username.length > 0 && <p className='errorMsg'>{errors.username}</p>}
 
                 <label>
                     Email
                     <input onChange={inputChange} id='email' type='email' name='email' value={formData.email} placeholder='Enter your Email'></input>
                 </label>
-                {errors.email.length > 0 && <p>{errors.email}</p>}
+                {errors.email.length > 0 && <p className='errorMsg'>{errors.email}</p>}
 
                 <label>
                     Password
                     <input onChange={inputChange} id='password' type='password' name='password' value={formData.password} placeholder='Enter a Secure Password'></input>
                 </label>
-                {errors.password.length > 0 && <p>{errors.password}</p>}
+                {errors.password.length > 0 && <p className='errorMsg'>{errors.password}</p>}
 
                 <label>
                     Terms and Conditions
                     <input onChange={inputChange} id='tos' type='checkbox' name='agreedTOS' checked={formData.agreedTOS} ></input>
                 </label>
-                <button disabled={buttonDisabled} >Submit!</button>
+                <button disabled={buttonDisabled} id='submit'>Submit!</button>
 
             </form>
             <div>

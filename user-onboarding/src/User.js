@@ -1,9 +1,9 @@
 const User = (props) => {
     const {user} = props;
     return(
-        <div>
-            <h1>{user.username}</h1>
-            <h2>{user.email}</h2>
+        <div className='user' >
+            <h2>{user.username}</h2>
+            <h3>{user.email}</h3>
         </div>
     )
 }
